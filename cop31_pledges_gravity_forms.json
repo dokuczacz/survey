@@ -1,0 +1,421 @@
+[
+  {
+    "title": "Submit an indicative commitment to the 2026 Antalya Pledges on AI",
+    "description": "Building on the COP29 Declaration on Green Digital Action, a High-Level Green Digital Action Roundtable on Artificial Intelligence will be held on 16 November 2026 during COP31 in Antalya.\n\nSpeaking opportunities will be prioritized for governments, organizations and stakeholders prepared to announce, support or advance concrete commitments for the environmentally sustainable, transparent and inclusive development and use of AI through measurable, voluntary action.",
+    "fields": [
+      {
+        "id": 1,
+        "type": "section",
+        "label": "Section 1 - Organization Information",
+        "description": "Please provide your organization's contact details.",
+        "cssClass": ""
+      },
+      {
+        "id": 2,
+        "type": "text",
+        "label": "Organization Name",
+        "required": true,
+        "cssClass": "org-name"
+      },
+      {
+        "id": 3,
+        "type": "text",
+        "label": "Organization Type",
+        "required": true,
+        "cssClass": "org-type"
+      },
+      {
+        "id": 4,
+        "type": "text",
+        "label": "Country / Sector",
+        "required": true,
+        "cssClass": "country-sector"
+      },
+      {
+        "id": 5,
+        "type": "text",
+        "label": "Contact Person",
+        "required": true
+      },
+      {
+        "id": 6,
+        "type": "email",
+        "label": "Email Address",
+        "required": true
+      },
+      {
+        "id": 7,
+        "type": "section",
+        "label": "Section 2 - A. Measurement, Transparency and Accountability",
+        "description": "Please select the commitments relevant to your organization and complete their targets.",
+        "cssClass": ""
+      },
+      {
+        "id": 8,
+        "type": "checkbox",
+        "label": "A1. Assess the environmental impacts of AI systems and share implementation results and data",
+        "description": "Target / Deliverable: Conduct and publicly disclose [X] assessments of AI environmental impacts using internationally recognized methodologies by [X].\n\nExample: Conduct 20 assessments of AI environmental impacts using internationally recognized methodologies by 2030.",
+        "choices": [
+          {
+            "text": "I intend to make this commitment",
+            "value": "yes"
+          }
+        ],
+        "cssClass": "pledge-a1"
+      },
+      {
+        "id": 9,
+        "type": "number",
+        "label": "Number/Amount",
+        "inputMask": false,
+        "cssClass": "a1-target1"
+      },
+      {
+        "id": 10,
+        "type": "number",
+        "label": "Target year",
+        "inputMask": false,
+        "cssClass": "a1-target2"
+      },
+      {
+        "id": 11,
+        "type": "checkbox",
+        "label": "A2. Measure and share national ICT sector greenhouse gas emissions using internationally harmonized indicators.",
+        "description": "Target / Deliverable: ICT GHG inventory produced and publicly reported by [X].\n\nExample: ICT GHG inventory produced and publicly reported by 2028.",
+        "choices": [
+          {
+            "text": "I intend to make this commitment",
+            "value": "yes"
+          }
+        ],
+        "cssClass": "pledge-a2"
+      },
+      {
+        "id": 12,
+        "type": "number",
+        "label": "Target year",
+        "inputMask": false,
+        "cssClass": "a2-target1"
+      },
+      {
+        "id": 13,
+        "type": "checkbox",
+        "label": "A3. Publicly disclose Scope 1, Scope 2 and Scope 3 greenhouse gas emissions using recognized reporting frameworks.",
+        "description": "Target / Deliverable: Public disclosure of Scope 1, Scope 2 and Scope 3 greenhouse gas emissions beginning in [X].\n\nExample: Public disclosure of Scope 1, Scope 2 and Scope 3 greenhouse gas emissions beginning in 2028 using a recognized reporting framework.",
+        "choices": [
+          {
+            "text": "I intend to make this commitment",
+            "value": "yes"
+          }
+        ],
+        "cssClass": "pledge-a3"
+      },
+      {
+        "id": 14,
+        "type": "number",
+        "label": "Target year",
+        "inputMask": false,
+        "cssClass": "a3-target1"
+      },
+      {
+        "id": 15,
+        "type": "section",
+        "label": "Section 3 - B. Infrastructure",
+        "description": "Please select the commitments relevant to your organization and complete their targets.",
+        "cssClass": ""
+      },
+      {
+        "id": 16,
+        "type": "checkbox",
+        "label": "B1. Increase the percentage of AI infrastructure powered by renewable energy.",
+        "description": "Target / Deliverable: [X]% of AI infrastructure powered by renewable energy by [X].\n\nExample: 80% of AI infrastructure powered by renewable energy by 2030.",
+        "choices": [
+          {
+            "text": "I intend to make this commitment",
+            "value": "yes"
+          }
+        ],
+        "cssClass": "pledge-b1"
+      },
+      {
+        "id": 17,
+        "type": "number",
+        "label": "Target percentage (%)",
+        "inputMask": false,
+        "cssClass": "b1-target1"
+      },
+      {
+        "id": 18,
+        "type": "number",
+        "label": "Target year",
+        "inputMask": false,
+        "cssClass": "b1-target2"
+      },
+      {
+        "id": 19,
+        "type": "checkbox",
+        "label": "B2. Adopt green data centre procurement requirements.",
+        "description": "Target / Deliverable: Green data centre requirements to be formally integrated into procurement processes by [X].\n\nExample: Green data centre requirements formally integrated into procurement processes by 2028.",
+        "choices": [
+          {
+            "text": "I intend to make this commitment",
+            "value": "yes"
+          }
+        ],
+        "cssClass": "pledge-b2"
+      },
+      {
+        "id": 20,
+        "type": "number",
+        "label": "Target year",
+        "inputMask": false,
+        "cssClass": "b2-target1"
+      },
+      {
+        "id": 21,
+        "type": "checkbox",
+        "label": "B3. Integrate sustainability by design in data centre development, construction and operation.",
+        "description": "Target / Deliverable: Adopt guidelines on the selection and measurement of cooling technologies for data centres by [X].\n\nExample: Guidelines on the selection and measurement of cooling technologies adopted by 2028.",
+        "choices": [
+          {
+            "text": "I intend to make this commitment",
+            "value": "yes"
+          }
+        ],
+        "cssClass": "pledge-b3"
+      },
+      {
+        "id": 22,
+        "type": "number",
+        "label": "Target year",
+        "inputMask": false,
+        "cssClass": "b3-target1"
+      },
+      {
+        "id": 23,
+        "type": "section",
+        "label": "Section 4 - C. Design",
+        "description": "Please select the commitments relevant to your organization and complete their targets.",
+        "cssClass": ""
+      },
+      {
+        "id": 24,
+        "type": "checkbox",
+        "label": "C1. Embed sustainability in model selection, development and procurement.",
+        "description": "Target / Deliverable: Guidelines or procurement requirements for green AI model design to be formally adopted by [X]. [X] of AI models applying green AI model design criteria by [X].\n\nExample: Green AI model design guidelines formally adopted by 2028. 80% of AI models applying green AI design criteria by 2030.",
+        "choices": [
+          {
+            "text": "I intend to make this commitment",
+            "value": "yes"
+          }
+        ],
+        "cssClass": "pledge-c1"
+      },
+      {
+        "id": 25,
+        "type": "number",
+        "label": "Target percentage (%)",
+        "inputMask": false,
+        "cssClass": "c1-target1"
+      },
+      {
+        "id": 26,
+        "type": "number",
+        "label": "Target year",
+        "inputMask": false,
+        "cssClass": "c1-target2"
+      },
+      {
+        "id": 27,
+        "type": "section",
+        "label": "Section 5 - D. AI Circularity and E-waste",
+        "description": "Please select the commitments relevant to your organization and complete their targets.",
+        "cssClass": ""
+      },
+      {
+        "id": 28,
+        "type": "checkbox",
+        "label": "D1. Adopt guidelines or procurement requirements for circularity, responsible decommissioning, reuse, recycling and e-waste management.",
+        "description": "Target / Deliverable: Guidelines or procurement requirements to be formally adopted by [X].\n\nExample: Circularity and e-waste management guidelines formally adopted by 2028.",
+        "choices": [
+          {
+            "text": "I intend to make this commitment",
+            "value": "yes"
+          }
+        ],
+        "cssClass": "pledge-d1"
+      },
+      {
+        "id": 29,
+        "type": "number",
+        "label": "Target year",
+        "inputMask": false,
+        "cssClass": "d1-target1"
+      },
+      {
+        "id": 30,
+        "type": "checkbox",
+        "label": "D2. Adopt circular design approaches that promote the efficient use, recovery and reuse of materials used in AI infrastructure and hardware.",
+        "description": "Target / Deliverable: [X] of AI projects applying circularity criteria by [X].\n\nExample: 50% of AI projects applying circularity criteria by 2028.",
+        "choices": [
+          {
+            "text": "I intend to make this commitment",
+            "value": "yes"
+          }
+        ],
+        "cssClass": "pledge-d2"
+      },
+      {
+        "id": 31,
+        "type": "number",
+        "label": "Target percentage (%)",
+        "inputMask": false,
+        "cssClass": "d2-target1"
+      },
+      {
+        "id": 32,
+        "type": "number",
+        "label": "Target year",
+        "inputMask": false,
+        "cssClass": "d2-target2"
+      },
+      {
+        "id": 33,
+        "type": "section",
+        "label": "Section 6 - E. AI for Climate Action",
+        "description": "Please select the commitments relevant to your organization and complete their targets.",
+        "cssClass": ""
+      },
+      {
+        "id": 34,
+        "type": "checkbox",
+        "label": "E1. Mobilize and provide financial, technical and other resources to support the development, deployment and scaling of inclusive AI solutions for climate action.",
+        "description": "Target / Deliverable: Conduct and publicly disclose [X] assessments of AI environmental impacts using internationally recognized methodologies by [X].\n\nExample: Conduct 25 assessments of AI environmental impacts using internationally recognized methodologies by 2030.",
+        "choices": [
+          {
+            "text": "I intend to make this commitment",
+            "value": "yes"
+          }
+        ],
+        "cssClass": "pledge-e1"
+      },
+      {
+        "id": 35,
+        "type": "number",
+        "label": "Number/Amount",
+        "inputMask": false,
+        "cssClass": "e1-target1"
+      },
+      {
+        "id": 36,
+        "type": "number",
+        "label": "Target year",
+        "inputMask": false,
+        "cssClass": "e1-target2"
+      },
+      {
+        "id": 37,
+        "type": "checkbox",
+        "label": "E2. Provide training on sustainable AI for AI developers, policymakers and other relevant stakeholders.",
+        "description": "Target / Deliverable: [X] trained stakeholders by [X].\n\nExample: 1000 AI developers and policymakers trained on sustainable AI by 2028.",
+        "choices": [
+          {
+            "text": "I intend to make this commitment",
+            "value": "yes"
+          }
+        ],
+        "cssClass": "pledge-e2"
+      },
+      {
+        "id": 38,
+        "type": "number",
+        "label": "Number/Amount",
+        "inputMask": false,
+        "cssClass": "e2-target1"
+      },
+      {
+        "id": 39,
+        "type": "number",
+        "label": "Target year",
+        "inputMask": false,
+        "cssClass": "e2-target2"
+      },
+      {
+        "id": 40,
+        "type": "checkbox",
+        "label": "E3. Assess the environmental impact and emissions-reduction potential of digital technologies across sectors and share implementation results and data.",
+        "description": "Target / Deliverable: [X] assessments on the environmental impacts and emissions-reduction potential of digital technologies across sectors conducted by [X].\n\nExample: 10 assessments of digital technologies across the energy, transport and agriculture sectors completed by 2028.",
+        "choices": [
+          {
+            "text": "I intend to make this commitment",
+            "value": "yes"
+          }
+        ],
+        "cssClass": "pledge-e3"
+      },
+      {
+        "id": 41,
+        "type": "number",
+        "label": "Number/Amount",
+        "inputMask": false,
+        "cssClass": "e3-target1"
+      },
+      {
+        "id": 42,
+        "type": "number",
+        "label": "Target year",
+        "inputMask": false,
+        "cssClass": "e3-target2"
+      },
+      {
+        "id": 43,
+        "type": "section",
+        "label": "Section 7 - Submission and Consent",
+        "description": "Please review the information provided and indicate whether your commitment(s) may be publicly communicated.",
+        "cssClass": ""
+      },
+      {
+        "id": 44,
+        "type": "radio",
+        "label": "May this pledge be publicly communicated by the COP31 Presidency, ITU, UNFCCC and Green Digital Action?",
+        "required": true,
+        "choices": [
+          {
+            "text": "Yes",
+            "value": "yes"
+          },
+          {
+            "text": "No",
+            "value": "no"
+          }
+        ],
+        "cssClass": "consent"
+      },
+      {
+        "id": 45,
+        "type": "section",
+        "label": "Section 8 - Partner2Connect",
+        "description": "We encourage you to submit this pledge on the Partner2Connect platform ahead of COP. https://www.itu.int/partner2connect/",
+        "cssClass": ""
+      },
+      {
+        "id": 46,
+        "type": "checkbox",
+        "label": "This pledge has been added to P2C",
+        "choices": [
+          {
+            "text": "Added to P2C",
+            "value": "yes"
+          }
+        ],
+        "cssClass": "p2c-added"
+      }
+    ],
+    "confirmationMessage": "Thank you for submitting your commitment to the 2026 Antalya Pledges on AI.",
+    "confirmationType": "message",
+    "labelPlacement": "top_label",
+    "descriptionPlacement": "above",
+    "subLabelPlacement": "below",
+    "requiredIndicator": "asterisk"
+  }
+]
