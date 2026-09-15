@@ -70,7 +70,8 @@ def pledge_fields(fields, code, label, target, example, audience=None, targets=(
 
 
 def section(fields, field_id, label, description=''):
-    fields.append({'id': field_id, 'type': 'section', 'label': label, 'description': description})
+    next_id = max((field['id'] for field in fields), default=0) + 1
+    fields.append({'id': next_id, 'type': 'section', 'label': label, 'description': description})
 
 
 def main():
@@ -117,9 +118,9 @@ def main():
     pledge_fields(fields, 'E3', 'Assess the environmental impact and emissions-reduction potential of digital technologies across sectors and share implementation results and data.', '[X] assessments on the environmental impacts and emissions-reduction potential of digital technologies across sectors conducted by [X].', '10 assessments of digital technologies across the energy, transport and agriculture sectors completed by 2028.', targets=(('number', 'Assessments', True), ('year', 'Target year', True)))
 
     section(fields, 12, 'Section 7 - Submission and Consent', 'Please review the information provided and indicate whether your commitment(s) may be publicly communicated.')
-    fields.append({'id': 13, 'type': 'radio', 'label': 'May this pledge be publicly communicated by the COP31 Presidency, ITU, UNFCCC and Green Digital Action?', 'isRequired': True, 'choices': [{'text': 'Yes', 'value': 'yes'}, {'text': 'No', 'value': 'no'}]})
+    fields.append({'id': len(fields) + 1, 'type': 'radio', 'label': 'May this pledge be publicly communicated by the COP31 Presidency, ITU, UNFCCC and Green Digital Action?', 'isRequired': True, 'choices': [{'text': 'Yes', 'value': 'yes'}, {'text': 'No', 'value': 'no'}]})
     section(fields, 14, 'Section 8 - Partner2Connect', 'We encourage you to submit this pledge on the Partner2Connect platform ahead of COP. https://www.itu.int/partner2connect/')
-    fields.append({'id': 15, 'type': 'checkbox', 'label': 'This pledge has been added to P2C', 'choices': [{'text': 'Added to P2C', 'value': 'yes'}]})
+    fields.append({'id': len(fields) + 1, 'type': 'checkbox', 'label': 'This pledge has been added to P2C', 'choices': [{'text': 'Added to P2C', 'value': 'yes'}]})
 
     form = {
         'title': 'Submit an indicative commitment to the 2026 Antalya Pledges on AI',

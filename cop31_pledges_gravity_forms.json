@@ -220,7 +220,7 @@
         }
       },
       {
-        "id": 8,
+        "id": 15,
         "type": "section",
         "label": "Section 3 - B. Infrastructure",
         "description": "Please select the commitments relevant to your organization and complete their targets."
@@ -400,7 +400,7 @@
         }
       },
       {
-        "id": 9,
+        "id": 26,
         "type": "section",
         "label": "Section 4 - C. Design",
         "description": "Please select the commitments relevant to your organization and complete their targets."
@@ -525,7 +525,7 @@
         }
       },
       {
-        "id": 10,
+        "id": 32,
         "type": "section",
         "label": "Section 5 - D. AI Circularity and E-waste",
         "description": "Please select the commitments relevant to your organization and complete their targets."
@@ -634,7 +634,7 @@
         }
       },
       {
-        "id": 11,
+        "id": 38,
         "type": "section",
         "label": "Section 6 - E. AI for Climate Action",
         "description": "Please select the commitments relevant to your organization and complete their targets."
@@ -818,13 +818,13 @@
         }
       },
       {
-        "id": 12,
+        "id": 49,
         "type": "section",
         "label": "Section 7 - Submission and Consent",
         "description": "Please review the information provided and indicate whether your commitment(s) may be publicly communicated."
       },
       {
-        "id": 13,
+        "id": 50,
         "type": "radio",
         "label": "May this pledge be publicly communicated by the COP31 Presidency, ITU, UNFCCC and Green Digital Action?",
         "isRequired": true,
@@ -840,13 +840,13 @@
         ]
       },
       {
-        "id": 14,
+        "id": 51,
         "type": "section",
         "label": "Section 8 - Partner2Connect",
         "description": "We encourage you to submit this pledge on the Partner2Connect platform ahead of COP. https://www.itu.int/partner2connect/"
       },
       {
-        "id": 15,
+        "id": 52,
         "type": "checkbox",
         "label": "This pledge has been added to P2C",
         "choices": [
