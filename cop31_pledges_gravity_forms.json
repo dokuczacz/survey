@@ -1,384 +1,833 @@
 [
   {
     "title": "Submit an indicative commitment to the 2026 Antalya Pledges on AI",
-    "description": "Building on the COP29 Declaration on Green Digital Action, a High-Level Green Digital Action Roundtable on Artificial Intelligence will be held on 16 November 2026 during COP31 in Antalya.\n\nSpeaking opportunities will be prioritized for governments, organizations and stakeholders prepared to announce, support or advance concrete commitments for the environmentally sustainable, transparent and inclusive development and use of AI through measurable, voluntary action.",
+    "description": "Please complete only the pledge commitments your organization intends to make. For each selected pledge, provide the exact target or number you commit to achieving.",
     "fields": [
       {
         "id": 1,
         "type": "section",
         "label": "Section 1 - Organization Information",
-        "description": "Please provide your organization's contact details.",
-        "cssClass": ""
+        "description": "Please provide your organization's contact details."
       },
       {
         "id": 2,
         "type": "text",
         "label": "Organization Name",
-        "required": true,
-        "cssClass": "org-name"
+        "adminLabel": "org-name",
+        "cssClass": "org-name",
+        "isRequired": true
       },
       {
         "id": 3,
-        "type": "text",
+        "type": "select",
         "label": "Organization Type",
-        "required": true,
-        "cssClass": "org-type"
+        "adminLabel": "org-type",
+        "cssClass": "org-type",
+        "isRequired": true,
+        "choices": [
+          {
+            "text": "Government",
+            "value": "government"
+          },
+          {
+            "text": "Private sector",
+            "value": "private-sector"
+          },
+          {
+            "text": "University",
+            "value": "university"
+          },
+          {
+            "text": "Civil society organization",
+            "value": "civil-society"
+          },
+          {
+            "text": "Other",
+            "value": "other"
+          }
+        ]
       },
       {
         "id": 4,
         "type": "text",
         "label": "Country / Sector",
-        "required": true,
-        "cssClass": "country-sector"
+        "adminLabel": "country-sector",
+        "cssClass": "country-sector",
+        "isRequired": true
       },
       {
         "id": 5,
         "type": "text",
         "label": "Contact Person",
-        "required": true
+        "adminLabel": "contact",
+        "cssClass": "contact",
+        "isRequired": true
       },
       {
         "id": 6,
         "type": "email",
         "label": "Email Address",
-        "required": true
+        "adminLabel": "email",
+        "isRequired": true
       },
       {
         "id": 7,
         "type": "section",
         "label": "Section 2 - A. Measurement, Transparency and Accountability",
-        "description": "Please select the commitments relevant to your organization and complete their targets.",
-        "cssClass": ""
+        "description": "Please select the commitments relevant to your organization and complete their targets."
       },
       {
         "id": 8,
         "type": "checkbox",
         "label": "A1. Assess the environmental impacts of AI systems and share implementation results and data",
         "description": "Target / Deliverable: Conduct and publicly disclose [X] assessments of AI environmental impacts using internationally recognized methodologies by [X].\n\nExample: Conduct 20 assessments of AI environmental impacts using internationally recognized methodologies by 2030.",
+        "adminLabel": "A1 commitment",
+        "cssClass": "pledge-a1",
         "choices": [
           {
             "text": "I intend to make this commitment",
-            "value": "yes"
+            "value": "1",
+            "isSelected": false
           }
-        ],
-        "cssClass": "pledge-a1"
+        ]
       },
       {
         "id": 9,
         "type": "number",
-        "label": "Number/Amount",
-        "inputMask": false,
-        "cssClass": "a1-target1"
+        "label": "Number of assessments",
+        "adminLabel": "a1-number",
+        "cssClass": "a1-number",
+        "isRequired": false,
+        "conditionalLogic": {
+          "actionType": "show",
+          "logicType": "all",
+          "rules": [
+            {
+              "fieldId": "8",
+              "operator": "is",
+              "value": "1"
+            }
+          ]
+        }
       },
       {
         "id": 10,
         "type": "number",
         "label": "Target year",
-        "inputMask": false,
-        "cssClass": "a1-target2"
+        "adminLabel": "a1-year",
+        "cssClass": "a1-year",
+        "isRequired": false,
+        "conditionalLogic": {
+          "actionType": "show",
+          "logicType": "all",
+          "rules": [
+            {
+              "fieldId": "8",
+              "operator": "is",
+              "value": "1"
+            }
+          ]
+        }
       },
       {
         "id": 11,
         "type": "checkbox",
         "label": "A2. Measure and share national ICT sector greenhouse gas emissions using internationally harmonized indicators.",
         "description": "Target / Deliverable: ICT GHG inventory produced and publicly reported by [X].\n\nExample: ICT GHG inventory produced and publicly reported by 2028.",
+        "adminLabel": "A2 commitment",
+        "cssClass": "pledge-a2",
         "choices": [
           {
             "text": "I intend to make this commitment",
-            "value": "yes"
+            "value": "1",
+            "isSelected": false
           }
         ],
-        "cssClass": "pledge-a2"
+        "conditionalLogic": {
+          "actionType": "show",
+          "logicType": "all",
+          "rules": [
+            {
+              "fieldId": "3",
+              "operator": "is",
+              "value": "government"
+            }
+          ]
+        }
       },
       {
         "id": 12,
         "type": "number",
         "label": "Target year",
-        "inputMask": false,
-        "cssClass": "a2-target1"
+        "adminLabel": "a2-year",
+        "cssClass": "a2-year",
+        "isRequired": false,
+        "conditionalLogic": {
+          "actionType": "show",
+          "logicType": "all",
+          "rules": [
+            {
+              "fieldId": "11",
+              "operator": "is",
+              "value": "1"
+            }
+          ]
+        }
       },
       {
         "id": 13,
         "type": "checkbox",
         "label": "A3. Publicly disclose Scope 1, Scope 2 and Scope 3 greenhouse gas emissions using recognized reporting frameworks.",
-        "description": "Target / Deliverable: Public disclosure of Scope 1, Scope 2 and Scope 3 greenhouse gas emissions beginning in [X].\n\nExample: Public disclosure of Scope 1, Scope 2 and Scope 3 greenhouse gas emissions beginning in 2028 using a recognized reporting framework.",
+        "description": "Target / Deliverable: ICT GHG inventory produced and publicly reported by [X].\n\nExample: ICT GHG inventory produced and publicly reported by 2028.",
+        "adminLabel": "A3 commitment",
+        "cssClass": "pledge-a3",
         "choices": [
           {
             "text": "I intend to make this commitment",
-            "value": "yes"
+            "value": "1",
+            "isSelected": false
           }
         ],
-        "cssClass": "pledge-a3"
+        "conditionalLogic": {
+          "actionType": "show",
+          "logicType": "all",
+          "rules": [
+            {
+              "fieldId": "3",
+              "operator": "isnot",
+              "value": "government"
+            }
+          ]
+        }
       },
       {
         "id": 14,
         "type": "number",
-        "label": "Target year",
-        "inputMask": false,
-        "cssClass": "a3-target1"
+        "label": "Starting year",
+        "adminLabel": "a3-year",
+        "cssClass": "a3-year",
+        "isRequired": false,
+        "conditionalLogic": {
+          "actionType": "show",
+          "logicType": "all",
+          "rules": [
+            {
+              "fieldId": "13",
+              "operator": "is",
+              "value": "1"
+            }
+          ]
+        }
       },
       {
-        "id": 15,
+        "id": 8,
         "type": "section",
         "label": "Section 3 - B. Infrastructure",
-        "description": "Please select the commitments relevant to your organization and complete their targets.",
-        "cssClass": ""
+        "description": "Please select the commitments relevant to your organization and complete their targets."
       },
       {
         "id": 16,
         "type": "checkbox",
         "label": "B1. Increase the percentage of AI infrastructure powered by renewable energy.",
         "description": "Target / Deliverable: [X]% of AI infrastructure powered by renewable energy by [X].\n\nExample: 80% of AI infrastructure powered by renewable energy by 2030.",
+        "adminLabel": "B1 commitment",
+        "cssClass": "pledge-b1",
         "choices": [
           {
             "text": "I intend to make this commitment",
-            "value": "yes"
+            "value": "1",
+            "isSelected": false
           }
-        ],
-        "cssClass": "pledge-b1"
+        ]
       },
       {
         "id": 17,
         "type": "number",
-        "label": "Target percentage (%)",
-        "inputMask": false,
-        "cssClass": "b1-target1"
+        "label": "Renewable-energy share (%)",
+        "adminLabel": "b1-percent",
+        "cssClass": "b1-percent",
+        "isRequired": false,
+        "conditionalLogic": {
+          "actionType": "show",
+          "logicType": "all",
+          "rules": [
+            {
+              "fieldId": "16",
+              "operator": "is",
+              "value": "1"
+            }
+          ]
+        }
       },
       {
         "id": 18,
         "type": "number",
         "label": "Target year",
-        "inputMask": false,
-        "cssClass": "b1-target2"
+        "adminLabel": "b1-year",
+        "cssClass": "b1-year",
+        "isRequired": false,
+        "conditionalLogic": {
+          "actionType": "show",
+          "logicType": "all",
+          "rules": [
+            {
+              "fieldId": "16",
+              "operator": "is",
+              "value": "1"
+            }
+          ]
+        }
       },
       {
         "id": 19,
         "type": "checkbox",
         "label": "B2. Adopt green data centre procurement requirements.",
         "description": "Target / Deliverable: Green data centre requirements to be formally integrated into procurement processes by [X].\n\nExample: Green data centre requirements formally integrated into procurement processes by 2028.",
+        "adminLabel": "B2 commitment",
+        "cssClass": "pledge-b2",
         "choices": [
           {
             "text": "I intend to make this commitment",
-            "value": "yes"
+            "value": "1",
+            "isSelected": false
           }
-        ],
-        "cssClass": "pledge-b2"
+        ]
       },
       {
         "id": 20,
         "type": "number",
         "label": "Target year",
-        "inputMask": false,
-        "cssClass": "b2-target1"
+        "adminLabel": "b2-year",
+        "cssClass": "b2-year",
+        "isRequired": false,
+        "conditionalLogic": {
+          "actionType": "show",
+          "logicType": "all",
+          "rules": [
+            {
+              "fieldId": "19",
+              "operator": "is",
+              "value": "1"
+            }
+          ]
+        }
       },
       {
         "id": 21,
         "type": "checkbox",
-        "label": "B3. Integrate sustainability by design in data centre development, construction and operation.",
+        "label": "B3.1. Integrate sustainability by design in data centre development, construction and operation.",
         "description": "Target / Deliverable: Adopt guidelines on the selection and measurement of cooling technologies for data centres by [X].\n\nExample: Guidelines on the selection and measurement of cooling technologies adopted by 2028.",
+        "adminLabel": "B3.1 commitment",
+        "cssClass": "pledge-b3-1",
         "choices": [
           {
             "text": "I intend to make this commitment",
-            "value": "yes"
+            "value": "1",
+            "isSelected": false
           }
-        ],
-        "cssClass": "pledge-b3"
+        ]
       },
       {
         "id": 22,
         "type": "number",
         "label": "Target year",
-        "inputMask": false,
-        "cssClass": "b3-target1"
+        "adminLabel": "b3-1-year",
+        "cssClass": "b3-1-year",
+        "isRequired": false,
+        "conditionalLogic": {
+          "actionType": "show",
+          "logicType": "all",
+          "rules": [
+            {
+              "fieldId": "21",
+              "operator": "is",
+              "value": "1"
+            }
+          ]
+        }
       },
       {
         "id": 23,
-        "type": "section",
-        "label": "Section 4 - C. Design",
-        "description": "Please select the commitments relevant to your organization and complete their targets.",
-        "cssClass": ""
-      },
-      {
-        "id": 24,
         "type": "checkbox",
-        "label": "C1. Embed sustainability in model selection, development and procurement.",
-        "description": "Target / Deliverable: Guidelines or procurement requirements for green AI model design to be formally adopted by [X]. [X] of AI models applying green AI model design criteria by [X].\n\nExample: Green AI model design guidelines formally adopted by 2028. 80% of AI models applying green AI design criteria by 2030.",
+        "label": "B3.2. Integrate sustainability by design in data centre development, construction and operation.",
+        "description": "Target / Deliverable: [X] of AI energy-efficient infrastructure based on standardized metrics.\n\nExample: 75% of AI infrastructure meeting standardized energy-efficiency metrics.",
+        "adminLabel": "B3.2 commitment",
+        "cssClass": "pledge-b3-2",
         "choices": [
           {
             "text": "I intend to make this commitment",
-            "value": "yes"
+            "value": "1",
+            "isSelected": false
           }
-        ],
-        "cssClass": "pledge-c1"
+        ]
+      },
+      {
+        "id": 24,
+        "type": "number",
+        "label": "Energy-efficient infrastructure (%)",
+        "adminLabel": "b3-2-percent",
+        "cssClass": "b3-2-percent",
+        "isRequired": false,
+        "conditionalLogic": {
+          "actionType": "show",
+          "logicType": "all",
+          "rules": [
+            {
+              "fieldId": "23",
+              "operator": "is",
+              "value": "1"
+            }
+          ]
+        }
       },
       {
         "id": 25,
         "type": "number",
-        "label": "Target percentage (%)",
-        "inputMask": false,
-        "cssClass": "c1-target1"
+        "label": "Target year",
+        "adminLabel": "b3-2-year",
+        "cssClass": "b3-2-year",
+        "isRequired": false,
+        "conditionalLogic": {
+          "actionType": "show",
+          "logicType": "all",
+          "rules": [
+            {
+              "fieldId": "23",
+              "operator": "is",
+              "value": "1"
+            }
+          ]
+        }
       },
       {
-        "id": 26,
-        "type": "number",
-        "label": "Target year",
-        "inputMask": false,
-        "cssClass": "c1-target2"
+        "id": 9,
+        "type": "section",
+        "label": "Section 4 - C. Design",
+        "description": "Please select the commitments relevant to your organization and complete their targets."
       },
       {
         "id": 27,
-        "type": "section",
-        "label": "Section 5 - D. AI Circularity and E-waste",
-        "description": "Please select the commitments relevant to your organization and complete their targets.",
-        "cssClass": ""
+        "type": "checkbox",
+        "label": "C1.1. Embed sustainability in model selection, development and procurement.",
+        "description": "Target / Deliverable: Green AI model design guidelines formally adopted by [X].\n\nExample: Green AI model design guidelines formally adopted by 2028.",
+        "adminLabel": "C1.1 commitment",
+        "cssClass": "pledge-c1-1",
+        "choices": [
+          {
+            "text": "I intend to make this commitment",
+            "value": "1",
+            "isSelected": false
+          }
+        ],
+        "conditionalLogic": {
+          "actionType": "show",
+          "logicType": "any",
+          "rules": [
+            {
+              "fieldId": "3",
+              "operator": "is",
+              "value": "private-sector"
+            },
+            {
+              "fieldId": "3",
+              "operator": "is",
+              "value": "university"
+            }
+          ]
+        }
       },
       {
         "id": 28,
-        "type": "checkbox",
-        "label": "D1. Adopt guidelines or procurement requirements for circularity, responsible decommissioning, reuse, recycling and e-waste management.",
-        "description": "Target / Deliverable: Guidelines or procurement requirements to be formally adopted by [X].\n\nExample: Circularity and e-waste management guidelines formally adopted by 2028.",
-        "choices": [
-          {
-            "text": "I intend to make this commitment",
-            "value": "yes"
-          }
-        ],
-        "cssClass": "pledge-d1"
+        "type": "number",
+        "label": "Guidelines adopted by",
+        "adminLabel": "c1-1-year",
+        "cssClass": "c1-1-year",
+        "isRequired": false,
+        "conditionalLogic": {
+          "actionType": "show",
+          "logicType": "all",
+          "rules": [
+            {
+              "fieldId": "27",
+              "operator": "is",
+              "value": "1"
+            }
+          ]
+        }
       },
       {
         "id": 29,
-        "type": "number",
-        "label": "Target year",
-        "inputMask": false,
-        "cssClass": "d1-target1"
-      },
-      {
-        "id": 30,
         "type": "checkbox",
-        "label": "D2. Adopt circular design approaches that promote the efficient use, recovery and reuse of materials used in AI infrastructure and hardware.",
-        "description": "Target / Deliverable: [X] of AI projects applying circularity criteria by [X].\n\nExample: 50% of AI projects applying circularity criteria by 2028.",
+        "label": "C1.2. Embed sustainability in model selection, development and procurement.",
+        "description": "Target / Deliverable: [X] of AI models applying green AI model design criteria by [X].\n\nExample: 80% of AI models applying green AI design criteria by 2030.",
+        "adminLabel": "C1.2 commitment",
+        "cssClass": "pledge-c1-2",
         "choices": [
           {
             "text": "I intend to make this commitment",
-            "value": "yes"
+            "value": "1",
+            "isSelected": false
           }
         ],
-        "cssClass": "pledge-d2"
+        "conditionalLogic": {
+          "actionType": "show",
+          "logicType": "any",
+          "rules": [
+            {
+              "fieldId": "3",
+              "operator": "is",
+              "value": "private-sector"
+            },
+            {
+              "fieldId": "3",
+              "operator": "is",
+              "value": "university"
+            }
+          ]
+        }
+      },
+      {
+        "id": 30,
+        "type": "number",
+        "label": "AI models applying criteria (%)",
+        "adminLabel": "c1-2-percent",
+        "cssClass": "c1-2-percent",
+        "isRequired": false,
+        "conditionalLogic": {
+          "actionType": "show",
+          "logicType": "all",
+          "rules": [
+            {
+              "fieldId": "29",
+              "operator": "is",
+              "value": "1"
+            }
+          ]
+        }
       },
       {
         "id": 31,
         "type": "number",
-        "label": "Target percentage (%)",
-        "inputMask": false,
-        "cssClass": "d2-target1"
+        "label": "Models target year",
+        "adminLabel": "c1-2-year",
+        "cssClass": "c1-2-year",
+        "isRequired": false,
+        "conditionalLogic": {
+          "actionType": "show",
+          "logicType": "all",
+          "rules": [
+            {
+              "fieldId": "29",
+              "operator": "is",
+              "value": "1"
+            }
+          ]
+        }
       },
       {
-        "id": 32,
-        "type": "number",
-        "label": "Target year",
-        "inputMask": false,
-        "cssClass": "d2-target2"
+        "id": 10,
+        "type": "section",
+        "label": "Section 5 - D. AI Circularity and E-waste",
+        "description": "Please select the commitments relevant to your organization and complete their targets."
       },
       {
         "id": 33,
-        "type": "section",
-        "label": "Section 6 - E. AI for Climate Action",
-        "description": "Please select the commitments relevant to your organization and complete their targets.",
-        "cssClass": ""
-      },
-      {
-        "id": 34,
         "type": "checkbox",
-        "label": "E1. Mobilize and provide financial, technical and other resources to support the development, deployment and scaling of inclusive AI solutions for climate action.",
-        "description": "Target / Deliverable: Conduct and publicly disclose [X] assessments of AI environmental impacts using internationally recognized methodologies by [X].\n\nExample: Conduct 25 assessments of AI environmental impacts using internationally recognized methodologies by 2030.",
+        "label": "D1. Adopt guidelines or procurement requirements for circularity, responsible decommissioning, reuse, recycling and e-waste management.",
+        "description": "Target / Deliverable: Guidelines or procurement requirements to be formally adopted by [X].\n\nExample: Circularity and e-waste management guidelines formally adopted by 2028.",
+        "adminLabel": "D1 commitment",
+        "cssClass": "pledge-d1",
         "choices": [
           {
             "text": "I intend to make this commitment",
-            "value": "yes"
+            "value": "1",
+            "isSelected": false
           }
-        ],
-        "cssClass": "pledge-e1"
+        ]
+      },
+      {
+        "id": 34,
+        "type": "number",
+        "label": "Target year",
+        "adminLabel": "d1-year",
+        "cssClass": "d1-year",
+        "isRequired": false,
+        "conditionalLogic": {
+          "actionType": "show",
+          "logicType": "all",
+          "rules": [
+            {
+              "fieldId": "33",
+              "operator": "is",
+              "value": "1"
+            }
+          ]
+        }
       },
       {
         "id": 35,
-        "type": "number",
-        "label": "Number/Amount",
-        "inputMask": false,
-        "cssClass": "e1-target1"
+        "type": "checkbox",
+        "label": "D2. Adopt circular design approaches that promote the efficient use, recovery and reuse of materials used in AI infrastructure and hardware.",
+        "description": "Target / Deliverable: [X] of AI projects applying circularity criteria by [X].\n\nExample: 50% of AI projects applying circularity criteria by 2028.",
+        "adminLabel": "D2 commitment",
+        "cssClass": "pledge-d2",
+        "choices": [
+          {
+            "text": "I intend to make this commitment",
+            "value": "1",
+            "isSelected": false
+          }
+        ],
+        "conditionalLogic": {
+          "actionType": "show",
+          "logicType": "any",
+          "rules": [
+            {
+              "fieldId": "3",
+              "operator": "is",
+              "value": "private-sector"
+            },
+            {
+              "fieldId": "3",
+              "operator": "is",
+              "value": "university"
+            }
+          ]
+        }
       },
       {
         "id": 36,
         "type": "number",
-        "label": "Target year",
-        "inputMask": false,
-        "cssClass": "e1-target2"
+        "label": "AI projects applying criteria (%)",
+        "adminLabel": "d2-percent",
+        "cssClass": "d2-percent",
+        "isRequired": false,
+        "conditionalLogic": {
+          "actionType": "show",
+          "logicType": "all",
+          "rules": [
+            {
+              "fieldId": "35",
+              "operator": "is",
+              "value": "1"
+            }
+          ]
+        }
       },
       {
         "id": 37,
-        "type": "checkbox",
-        "label": "E2. Provide training on sustainable AI for AI developers, policymakers and other relevant stakeholders.",
-        "description": "Target / Deliverable: [X] trained stakeholders by [X].\n\nExample: 1000 AI developers and policymakers trained on sustainable AI by 2028.",
-        "choices": [
-          {
-            "text": "I intend to make this commitment",
-            "value": "yes"
-          }
-        ],
-        "cssClass": "pledge-e2"
+        "type": "number",
+        "label": "Target year",
+        "adminLabel": "d2-year",
+        "cssClass": "d2-year",
+        "isRequired": false,
+        "conditionalLogic": {
+          "actionType": "show",
+          "logicType": "all",
+          "rules": [
+            {
+              "fieldId": "35",
+              "operator": "is",
+              "value": "1"
+            }
+          ]
+        }
       },
       {
-        "id": 38,
-        "type": "number",
-        "label": "Number/Amount",
-        "inputMask": false,
-        "cssClass": "e2-target1"
+        "id": 11,
+        "type": "section",
+        "label": "Section 6 - E. AI for Climate Action",
+        "description": "Please select the commitments relevant to your organization and complete their targets."
       },
       {
         "id": 39,
-        "type": "number",
-        "label": "Target year",
-        "inputMask": false,
-        "cssClass": "e2-target2"
-      },
-      {
-        "id": 40,
         "type": "checkbox",
-        "label": "E3. Assess the environmental impact and emissions-reduction potential of digital technologies across sectors and share implementation results and data.",
-        "description": "Target / Deliverable: [X] assessments on the environmental impacts and emissions-reduction potential of digital technologies across sectors conducted by [X].\n\nExample: 10 assessments of digital technologies across the energy, transport and agriculture sectors completed by 2028.",
+        "label": "E1. Mobilize and provide financial, technical and other resources to support the development, deployment and scaling of inclusive AI solutions for climate action.",
+        "description": "Target / Deliverable: Financial, in-kind and/or technical support valued at CHF [X] committed to benefit [X] countries and/or stakeholders by [X].\n\nExample: CHF 500,000 of financial and technical support committed to benefit [X] countries and/or stakeholders by 2028.",
+        "adminLabel": "E1 commitment",
+        "cssClass": "pledge-e1",
         "choices": [
           {
             "text": "I intend to make this commitment",
-            "value": "yes"
+            "value": "1",
+            "isSelected": false
           }
-        ],
-        "cssClass": "pledge-e3"
+        ]
+      },
+      {
+        "id": 40,
+        "type": "number",
+        "label": "Committed value (CHF)",
+        "adminLabel": "e1-amount",
+        "cssClass": "e1-amount",
+        "isRequired": false,
+        "conditionalLogic": {
+          "actionType": "show",
+          "logicType": "all",
+          "rules": [
+            {
+              "fieldId": "39",
+              "operator": "is",
+              "value": "1"
+            }
+          ]
+        }
       },
       {
         "id": 41,
         "type": "number",
-        "label": "Number/Amount",
-        "inputMask": false,
-        "cssClass": "e3-target1"
+        "label": "Countries and/or stakeholders",
+        "adminLabel": "e1-beneficiaries",
+        "cssClass": "e1-beneficiaries",
+        "isRequired": false,
+        "conditionalLogic": {
+          "actionType": "show",
+          "logicType": "all",
+          "rules": [
+            {
+              "fieldId": "39",
+              "operator": "is",
+              "value": "1"
+            }
+          ]
+        }
       },
       {
         "id": 42,
         "type": "number",
         "label": "Target year",
-        "inputMask": false,
-        "cssClass": "e3-target2"
+        "adminLabel": "e1-year",
+        "cssClass": "e1-year",
+        "isRequired": false,
+        "conditionalLogic": {
+          "actionType": "show",
+          "logicType": "all",
+          "rules": [
+            {
+              "fieldId": "39",
+              "operator": "is",
+              "value": "1"
+            }
+          ]
+        }
       },
       {
         "id": 43,
-        "type": "section",
-        "label": "Section 7 - Submission and Consent",
-        "description": "Please review the information provided and indicate whether your commitment(s) may be publicly communicated.",
-        "cssClass": ""
+        "type": "checkbox",
+        "label": "E2. Provide training on sustainable AI for AI developers, policymakers and other relevant stakeholders.",
+        "description": "Target / Deliverable: [X] trained stakeholders by [X].\n\nExample: 1000 AI developers and policymakers trained on sustainable AI by 2028.",
+        "adminLabel": "E2 commitment",
+        "cssClass": "pledge-e2",
+        "choices": [
+          {
+            "text": "I intend to make this commitment",
+            "value": "1",
+            "isSelected": false
+          }
+        ]
       },
       {
         "id": 44,
+        "type": "number",
+        "label": "Trained stakeholders",
+        "adminLabel": "e2-number",
+        "cssClass": "e2-number",
+        "isRequired": false,
+        "conditionalLogic": {
+          "actionType": "show",
+          "logicType": "all",
+          "rules": [
+            {
+              "fieldId": "43",
+              "operator": "is",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      {
+        "id": 45,
+        "type": "number",
+        "label": "Target year",
+        "adminLabel": "e2-year",
+        "cssClass": "e2-year",
+        "isRequired": false,
+        "conditionalLogic": {
+          "actionType": "show",
+          "logicType": "all",
+          "rules": [
+            {
+              "fieldId": "43",
+              "operator": "is",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      {
+        "id": 46,
+        "type": "checkbox",
+        "label": "E3. Assess the environmental impact and emissions-reduction potential of digital technologies across sectors and share implementation results and data.",
+        "description": "Target / Deliverable: [X] assessments on the environmental impacts and emissions-reduction potential of digital technologies across sectors conducted by [X].\n\nExample: 10 assessments of digital technologies across the energy, transport and agriculture sectors completed by 2028.",
+        "adminLabel": "E3 commitment",
+        "cssClass": "pledge-e3",
+        "choices": [
+          {
+            "text": "I intend to make this commitment",
+            "value": "1",
+            "isSelected": false
+          }
+        ]
+      },
+      {
+        "id": 47,
+        "type": "number",
+        "label": "Assessments",
+        "adminLabel": "e3-number",
+        "cssClass": "e3-number",
+        "isRequired": false,
+        "conditionalLogic": {
+          "actionType": "show",
+          "logicType": "all",
+          "rules": [
+            {
+              "fieldId": "46",
+              "operator": "is",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      {
+        "id": 48,
+        "type": "number",
+        "label": "Target year",
+        "adminLabel": "e3-year",
+        "cssClass": "e3-year",
+        "isRequired": false,
+        "conditionalLogic": {
+          "actionType": "show",
+          "logicType": "all",
+          "rules": [
+            {
+              "fieldId": "46",
+              "operator": "is",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      {
+        "id": 12,
+        "type": "section",
+        "label": "Section 7 - Submission and Consent",
+        "description": "Please review the information provided and indicate whether your commitment(s) may be publicly communicated."
+      },
+      {
+        "id": 13,
         "type": "radio",
         "label": "May this pledge be publicly communicated by the COP31 Presidency, ITU, UNFCCC and Green Digital Action?",
-        "required": true,
+        "isRequired": true,
         "choices": [
           {
             "text": "Yes",
@@ -388,18 +837,16 @@
             "text": "No",
             "value": "no"
           }
-        ],
-        "cssClass": "consent"
+        ]
       },
       {
-        "id": 45,
+        "id": 14,
         "type": "section",
         "label": "Section 8 - Partner2Connect",
-        "description": "We encourage you to submit this pledge on the Partner2Connect platform ahead of COP. https://www.itu.int/partner2connect/",
-        "cssClass": ""
+        "description": "We encourage you to submit this pledge on the Partner2Connect platform ahead of COP. https://www.itu.int/partner2connect/"
       },
       {
-        "id": 46,
+        "id": 15,
         "type": "checkbox",
         "label": "This pledge has been added to P2C",
         "choices": [
@@ -407,15 +854,12 @@
             "text": "Added to P2C",
             "value": "yes"
           }
-        ],
-        "cssClass": "p2c-added"
+        ]
       }
     ],
-    "confirmationMessage": "Thank you for submitting your commitment to the 2026 Antalya Pledges on AI.",
     "confirmationType": "message",
+    "confirmationMessage": "Thank you for submitting your commitment to the 2026 Antalya Pledges on AI.",
     "labelPlacement": "top_label",
-    "descriptionPlacement": "above",
-    "subLabelPlacement": "below",
     "requiredIndicator": "asterisk"
   }
 ]
